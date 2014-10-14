@@ -12,15 +12,9 @@ import javax.swing.JComponent;
 public class CityscapeComponent extends JComponent
 {
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * This method is invoked by the Java Run-Time whenever the component needs to be redrawn.
+     * It does not need to be invoked explicitly.
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
      */
     public void paintComponent(Graphics g)
     {
