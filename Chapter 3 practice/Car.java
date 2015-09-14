@@ -21,8 +21,8 @@ public class Car
      */
     public Car( double fuelEfficiency )
     {
-        fuelInTank = 0.0;
-        fuelEfficiency = fuelEfficiency;
+        this.fuelInTank = 0.0;
+        this.fuelEfficiency = fuelEfficiency;
     }
 
     /**
@@ -45,7 +45,8 @@ public class Car
     {
         return fuelInTank;
     }
-
+
+
     /**
      * Increments the fuel stored in the car's tank by the specified amount in gallons
      * @pre     Gallons of gas must be positive
