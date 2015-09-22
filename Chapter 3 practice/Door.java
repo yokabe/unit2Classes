@@ -1,5 +1,4 @@
 
-
 /**
  * The class Door makes a door.
  * 
@@ -60,20 +59,21 @@ public class Door
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *  that describes the operation of the method
-     *
-     * @pre     preconditions for the method
-     *          (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *          (what the method guarantees upon completion)
-     * @param   y   description of parameter y
-     * @return  description of the return value
+     * Returns the state of the door in string form
+     * @return  Returns the state of the door in string form
      */
-    public int sampleMethod(int y)
+    public String getState()
     {
-        // put your code here
-        return y;
+        return this.state;
+    }
+    
+    /**
+     * Sets a new name for the door object
+     * @param   newName   Name of door
+     */
+    public void setName(String newName)
+    {
+       this.name = newName;
     }
 
 }
