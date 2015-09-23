@@ -1,5 +1,6 @@
 import java.awt.Graphics2D;
 import java.awt.geom.Ellipse2D;
+import java.awt.Color;
 
 
 /**
@@ -28,19 +29,24 @@ public class Target
      * Draws the target
      * @param   g2  the graphics context
      */
-    public void draw(Graphics2D g2)
+    public void draw(Graphics2D g2, int n)
     {
-        int n = 0;
-        Ellipse2D.Double black = new Ellipse2D.Double(xLeft, yTop, 500, 500);
-        Ellipse2D.Double white = new Ellipse2D.Double(xLeft-50, yTop-50, 400, 400);
-        g2.draw(black);
-        g2.draw(white);
-        while (n<50)
+        if (n%2 == 0)
         {
-            
-            n += 1;
+            Ellipse2D.Double black = new Ellipse2D.Double(xLeft, yTop, 500-(10*n), 500-(10*n));
+            g2.draw(black);
+            g2.setColor(Color.BLACK);
+            g2.fill(black);
         }
+       
+        else
+        {
+            Ellipse2D.Double white = new Ellipse2D.Double(xLeft, yTop, 500-(1*n), 500-(10*n));
+            g2.draw(white);
+            g2.setColor(Color.WHITE);
+            g2.fill(white);
         
+        }
         
     }
 

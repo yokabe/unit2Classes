@@ -17,9 +17,17 @@ public class TargetComponenet extends JComponent
     public void paintComponent(Graphics g)
     {
         Graphics2D g2 = (Graphics2D) g;
-        Target first = new Target(100, 100);
         
-        first.draw(g2);
+        int n = 0;
+        while (n < 100)
+        {
+            Target target = new Target(100+(5*n),100+(5*n));
+            target.draw(g2, n);
+            n += 1;
+            
+        }
+        
+       
     }
 
 }
