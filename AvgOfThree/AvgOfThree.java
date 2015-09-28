@@ -19,7 +19,7 @@ public class AvgOfThree
       // compute the average of the three numbers
 
       double avg = (a + b + c) / 3;
-      
+  
       System.out.println ("average " + avg);
    }
 }
