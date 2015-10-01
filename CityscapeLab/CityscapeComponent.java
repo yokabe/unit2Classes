@@ -29,9 +29,10 @@ public class CityscapeComponent extends JComponent
     {
         Graphics2D g2 = (Graphics2D) g;
         
-        // invoke the draw method on each object in your Cityscape
-        // ...
-        
+        Building1 cool = new Building1(7, 100, 100);
+        Building1 test = new Building1(5, 150, 150);
+        cool.draw(g2);
+        test.draw(g2);
         
     }
     
