@@ -36,9 +36,11 @@ public class Building1
     public void draw(Graphics2D g2)
     {
         int height = floors*25;
+        int newTop = topY + height;
         
-        Rectangle building = new Rectangle(leftX, topY, 100, height);
+        Rectangle building = new Rectangle(leftX, newTop, 100, height);
         g2.draw(building);
     }
 
 }
+ 
