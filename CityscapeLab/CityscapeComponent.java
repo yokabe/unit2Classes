@@ -12,13 +12,17 @@ import java.util.Random;
  */
 public class CityscapeComponent extends JComponent
 {
-    // define the objects in your Cityscape as instance variables
-    // ...
     
+    private Road road;
     
+    private Grass grass;
     
-    // define the CityscapeComponent contructor and intiailize all instance variables
-    // ...
+    public CityscapeComponent()
+    {
+        this.road = new Road(10000);
+        this.grass = new Grass(10000, 10000);
+        
+    }
     
     
     /**
@@ -36,18 +40,15 @@ public class CityscapeComponent extends JComponent
         
         while (n < getWidth())
         {
-            int floor = generator.nextInt(10);
-            Building1 building = new Building1(floor, n, 375);
+            int floor = generator.nextInt(10) + 5;
+            Building1 building = new Building1(floor, n, 775);
             building.draw(g2);
             n += 150;
         }
        
         
         
-        Road road = new Road(getWidth());
-        road.draw(g2, getWidth());
-        
-        Grass grass = new Grass(getWidth(), getHeight());
+        road.draw(g2);
         grass.draw(g2);
      
     }

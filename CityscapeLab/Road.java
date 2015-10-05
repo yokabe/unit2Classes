@@ -28,17 +28,17 @@ public class Road
      *
      * @param    y    description of parameter y
      */
-    public void draw(Graphics2D g2, int width)
+    public void draw(Graphics2D g2)
     {
-        Rectangle road = new Rectangle(0, 375, this.length, 200);
+        Rectangle road = new Rectangle(0, 775, this.length, 200);
         g2.draw(road);
         g2.setColor(Color.BLACK);
         g2.fill(road);
         
         int n = 0;
-        while (n < width)
+        while (n < 10000)
         {
-            Rectangle lines = new Rectangle(n, 397, 10, 5);
+            Rectangle lines = new Rectangle(n, 797, 10, 5);
             g2.draw(lines);
             g2.setColor(Color.YELLOW);
             g2.fill(lines);

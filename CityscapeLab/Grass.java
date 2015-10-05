@@ -32,7 +32,7 @@ public class Grass
      */
     public void draw(Graphics2D g2)
     {
-        Rectangle grass = new Rectangle(0, 425, this.length, this.height);
+        Rectangle grass = new Rectangle(0, 825, this.length, this.height);
         g2.draw(grass);
         g2.setColor(Color.GREEN);
         g2.fill(grass);
