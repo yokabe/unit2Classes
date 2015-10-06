@@ -2,6 +2,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import javax.swing.JComponent;
 import java.util.Random;
+import java.awt.Color;
 
 /**
  * Class that creates instances of the classes that comprise the cityscape and delegates drawing the
@@ -12,15 +13,21 @@ import java.util.Random;
  */
 public class CityscapeComponent extends JComponent
 {
-    
+    /**  Road object in picture */
     private Road road;
-    
+    /** Grass object in picture */
     private Grass grass;
+    /** Skyscraper object in picture */
+    private Skyscraper skyscraper1;
+    
+    
     
     public CityscapeComponent()
     {
         this.road = new Road(10000);
         this.grass = new Grass(10000, 10000);
+        
+        this.skyscraper1 = new Skyscraper(350, 775, 200, 100);
         
     }
     
@@ -40,16 +47,26 @@ public class CityscapeComponent extends JComponent
         
         while (n < getWidth())
         {
-            int floor = generator.nextInt(10) + 5;
-            Building1 building = new Building1(floor, n, 775);
-            building.draw(g2);
-            n += 150;
+            if (n == 350)
+            {
+                
+                n += 150;
+            }
+            else
+            {
+                int floor = generator.nextInt(10) + 5;
+                Building1 building = new Building1(floor, n, 775);
+                building.draw(g2);
+                n += 150;
+            }   
         }
        
         
         
         road.draw(g2);
         grass.draw(g2);
+        skyscraper1.draw(g2);
+        
      
     }
     

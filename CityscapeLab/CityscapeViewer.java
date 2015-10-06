@@ -1,5 +1,12 @@
 import javax.swing.JFrame;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.image.*;
+import java.io.*;
+import javax.imageio.*;
+import javax.swing.*;
+ 
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
  * 
@@ -11,6 +18,8 @@ public class CityscapeViewer
     // the cityscape will be animated for 60 seconds
     static final int ANIMATION_TIME_IN_SECONDS = 60;
    
+    
+    
     /**
      * main method for the program which creates and configures the frame for the program
      *
@@ -24,14 +33,21 @@ public class CityscapeViewer
         frame.setTitle("Cityscape");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        JPanel panel = (JPanel)frame.getContentPane();
-        JLabel label = new JLabel();
-        frame.setIcon(new ImageIcon("https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg"));
-        frame.setLocationRelativeTo(null);
-        frame.pack();
+        
+
+        
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
         // ...
+        BufferedImage img = null;
+        try 
+        {
+            img = ImageIO.read(new File("https://upload.wikimedia.org/wikipedia/commons/1/16/Appearance_of_sky_for_weather_forecast,_Dhaka,_Bangladesh.JPG"));
+            
+        }
+        catch (IOException e){
+        }
+        
         
         
         

@@ -1,7 +1,10 @@
-
+import java.awt.Color;
+import java.awt.Rectangle;
+import java.awt.Graphics2D;
+import java.util.Random;
 
 /**
- * Write a description of class Skyscraper here.
+ * Creates and draws a skyscraper
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -30,19 +33,33 @@ public class Skyscraper
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
+     * Draws a skyscraper
      *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
+     * @param    Graphics2D g2
      */
-    public void draw(int y)
+    public void draw(Graphics2D g2)
     {
-        // put your code here
-        return x+y;
+        int newTop = this.topY - this.height;
+        Rectangle p1 = new Rectangle(this.leftX, newTop, this.width, this.height);
+        g2.draw(p1);
+        g2.setColor(Color.CYAN);
+        g2.fill(p1);
+        
+        Rectangle p2 = new Rectangle(this.leftX, newTop - 200, this.width - 20, this.height);
+        g2.draw(p2);
+        g2.setColor(Color.CYAN);
+        g2.fill(p2);
+        
+        Rectangle p3 = new Rectangle(this.leftX, newTop - 400, this.width - 40, this.height);
+        g2.draw(p3);
+        g2.setColor(Color.CYAN);
+        g2.fill(p3);
+        
+        Rectangle p4 = new Rectangle(365, newTop - 550, 10, this.height - 50);
+        g2.draw(p4);
+        g2.setColor(Color.GRAY);
+        g2.fill(p4);
+        
     }
 
 }
