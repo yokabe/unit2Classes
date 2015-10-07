@@ -7,6 +7,7 @@ import java.io.*;
 import javax.imageio.*;
 import javax.swing.*;
  
+import java.util.Scanner;
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
  * 
@@ -38,17 +39,12 @@ public class CityscapeViewer
         
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
-        // ...
-        BufferedImage img = null;
-        try 
-        {
-            img = ImageIO.read(new File("https://upload.wikimedia.org/wikipedia/commons/1/16/Appearance_of_sky_for_weather_forecast,_Dhaka,_Bangladesh.JPG"));
-            
-        }
-        catch (IOException e){
-        }
+        Scanner scanner = new Scanner(System.in);
         
         
+        
+        
+        // Inserts an sky image as the background of the frame
         
         
         // a frame contains a single component; create the Cityscape component and add it to the frame

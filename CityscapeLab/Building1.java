@@ -67,18 +67,18 @@ public class Building1
         
         int n = 1;
         
-        while (n < floors)
+        while (n < (floors*2))
         {
             
-            Rectangle window1 = new Rectangle(leftX + 15, newTop + (10*2*n), 25, 25);
-            Rectangle window2 = new Rectangle(leftX + 55, newTop + (10*2*n), 25, 25);
+            Rectangle window1 = new Rectangle(leftX + 15, newTop + (10*2*n), 25, 10);
+            Rectangle window2 = new Rectangle(leftX + 55, newTop + (10*2*n), 25, 10);
             g2.draw(window1);
             g2.draw(window2);
             g2.setColor(Color.BLUE);
             g2.fill(window1);
             g2.fill(window2);
             
-            n += 2;
+            n += 1;
         }    
     }
 
