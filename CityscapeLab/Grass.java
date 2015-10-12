@@ -28,10 +28,12 @@ public class Grass
     /**
      * Draws a grass
      *
-     * @param    y    description of parameter y
+     * @param    g2 Graphics2D
      */
     public void draw(Graphics2D g2)
     {
+        
+        //Draws grass on bottom part of the screen
         Rectangle grass = new Rectangle(0, 825, this.length, this.height);
         g2.draw(grass);
         g2.setColor(Color.GREEN);

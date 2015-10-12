@@ -39,25 +39,31 @@ public class Skyscraper
      */
     public void draw(Graphics2D g2)
     {
-        int newTop = this.topY - this.height;
+        int newTop = this.topY - this.height; // Calculates the new y coordinate for building
+                                              // Depending on the height  
+                                              
+        //Draws first box of skyscraper
         Rectangle p1 = new Rectangle(this.leftX, newTop, this.width, this.height);
         g2.draw(p1);
-        g2.setColor(Color.CYAN);
+        g2.setColor(Color.GRAY);
         g2.fill(p1);
         
+        //Draws second box of skyscraper
         Rectangle p2 = new Rectangle(this.leftX, newTop - 200, this.width - 20, this.height);
         g2.draw(p2);
-        g2.setColor(Color.CYAN);
+        g2.setColor(Color.GRAY);
         g2.fill(p2);
         
+        //Draws third box of skyscraper
         Rectangle p3 = new Rectangle(this.leftX, newTop - 400, this.width - 40, this.height);
         g2.draw(p3);
-        g2.setColor(Color.CYAN);
+        g2.setColor(Color.GRAY);
         g2.fill(p3);
         
+        //Draws the antenna 
         Rectangle p4 = new Rectangle(365, newTop - 550, 10, this.height - 50);
         g2.draw(p4);
-        g2.setColor(Color.GRAY);
+        g2.setColor(Color.CYAN);
         g2.fill(p4);
         
     }

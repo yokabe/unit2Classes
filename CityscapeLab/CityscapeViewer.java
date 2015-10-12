@@ -6,8 +6,12 @@ import java.awt.image.*;
 import java.io.*;
 import javax.imageio.*;
 import javax.swing.*;
- 
+import java.awt.Color;
+import java.awt.Rectangle;
+import java.awt.Graphics2D;
+import java.util.Random;
 import java.util.Scanner;
+
 /**
  * Class that contains the main method for the program and creates the frame containing the component.
  * 
@@ -30,21 +34,25 @@ public class CityscapeViewer
         // create and configure the frame (window) for the program
         JFrame frame = new JFrame();
         
-        frame.setSize(1500 /* x */, 1500 /* y */);
-        frame.setTitle("Cityscape");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         
+        
+       
 
         
         
         // use the Scanner class to prompt the user for some configurable aspect of the cityscape
+        // Sets the frame size to the number of buildings desired
         Scanner scanner = new Scanner(System.in);
-        
-        
-        
-        
-        // Inserts an sky image as the background of the frame
+        int buildings;
+        System.out.print("How many buildings do you want in the city: ");
+        buildings = scanner.nextInt();
+       
+        int x = buildings*150;
+    
+        frame.setSize(x, 1500 /* y */);
+        frame.setTitle("Cityscape");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
         
         // a frame contains a single component; create the Cityscape component and add it to the frame
@@ -63,5 +71,4 @@ public class CityscapeViewer
         }
         
     }
-
 }

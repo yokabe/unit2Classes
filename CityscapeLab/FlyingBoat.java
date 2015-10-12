@@ -22,7 +22,7 @@ public class FlyingBoat
     private int x;
     
     /**
-     * Default constructor for objects of class UFO
+     * Default constructor for objects of class FlyingBoat
      */
     public FlyingBoat(int length, int height)
     {
@@ -34,15 +34,18 @@ public class FlyingBoat
     /**
      * Draws a Boat
      *
-     * @param    y    description of parameter y
+     * @param    g2 Graphics2D
      */
     public void draw(Graphics2D g2)
     {
+        
+        //Makes the boat
         Rectangle body = new Rectangle(100 + this.x, 300, this.length, this.height);
         Rectangle body2 = new Rectangle(100 + this.x, 320, 200, 35);
         Rectangle pole1 = new Rectangle(150 + this.x, 225, 20, 75);
         Rectangle pole2 = new Rectangle(200 + this.x, 250, 20, 50);
         
+        //Draws the boat and fills in the shapes with colors
         g2.draw(body);
         g2.setColor(Color.WHITE);
         g2.fill(body);
@@ -66,7 +69,8 @@ public class FlyingBoat
      */
     public void fly()
     {
-        this.x += 50;
+        this.x += 50; // Adds 50 to the x coordinate of the boat so that every time the boat is repainted,
+                      // the boat is moved to the right 50 pixels.
     }
 
 }

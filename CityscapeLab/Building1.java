@@ -36,13 +36,17 @@ public class Building1
      */
     public void draw(Graphics2D g2)
     {
-        int height = floors*25;
-        int newTop = topY - height;
-        Random generator = new Random();
-        int n2 = generator.nextInt(5);
+        int height = floors*25; //Calculates the height of the building depending on number of floors
+        int newTop = topY - height; //Calculates the new y coordinate of the building depending on height
         
+        Random generator = new Random();
+        int n2 = generator.nextInt(5); //Generates a random number to randomize the color that the building is set to
+        
+        //Draws the building
         Rectangle building = new Rectangle(leftX, newTop, 100, height);
         g2.draw(building);
+        
+        //Randomizes the color of each building and fills in the building with that color
         if (n2 == 0)
         {
             g2.setColor(Color.GRAY);
@@ -65,11 +69,11 @@ public class Building1
         }
         g2.fill(building);
         
-        int n = 1;
+        int n = 1; // Number to be used to determine the number of windows of a building
         
         while (n < (floors*2))
         {
-            
+            //A while loop that draws a set number of windows depending on the height of the building
             Rectangle window1 = new Rectangle(leftX + 15, newTop + (10*2*n), 25, 10);
             Rectangle window2 = new Rectangle(leftX + 55, newTop + (10*2*n), 25, 10);
             g2.draw(window1);
